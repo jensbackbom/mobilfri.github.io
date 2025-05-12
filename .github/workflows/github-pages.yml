@@ -7,11 +7,7 @@ on:
      branches: [ master, main ]
 
 jobs:
-   job-name:
-      permissions:
-        contents: write  
-        pages: write
-      
+  
    build:
 
      runs-on: ubuntu-latest
