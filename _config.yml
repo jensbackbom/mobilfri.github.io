@@ -6,15 +6,4 @@ description: "Vi hjälper dig att minska ditt mobilanvändande och frigöra tid 
 paginate: 5
 permalink: /:year/:month/:day/:title:output_ext
 
-plugins:
-  - jekyll-postcss
-  - jekyll-paginate  
-  - jekyll-sitemap
-  - jekyll-seo-tag
-
-postcss:
-  cache: false
-
 logo: "/assets/img/breakeven_logo.png"
-
-include: ["node_modules/tailwindcss"]
