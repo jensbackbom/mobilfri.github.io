@@ -1,37 +1,20 @@
-url: "https://www.paretoschool.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.breakeven.nu" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: 'www.breakeven.nu'
 baseurl: "" # the subpath of your site, e.g. /blog
-title: "Pareto Business School" # the name of your site, e.g. ACME Corp.
-description: "Learn practical business skills from founders and executives at world-leading companies in an 8-week alternative MBA program."
+title: "Breakeven - hyllar bolag med fina marginaler" # the name of your site, e.g. ACME Corp.
+description: "Breakeven visar upp Sveriges lönsammaste bolag!"
+paginate: 5
+permalink: /:year/:month/:day/:title:output_ext
 
 plugins:
   - jekyll-postcss
+  - jekyll-paginate  
   - jekyll-sitemap
   - jekyll-seo-tag
 
 postcss:
   cache: false
 
-twitter:
-  username: paretoschool
-  card: summary_large_image
-
-logo: "/assets/img/pareto_logo_line.png"
-
-collections:
-  resources:
-    title: true
-    categories: true
-    output: true
-    permalink: /:collection/:slug/
-  mental_models:
-    title: true
-    categories: true
-    output: true
-    permalink: /:collection/:slug/    
-
-#sass:
-#  load_paths:
-#    - _sass
-#    - node_modules
+logo: "/assets/img/breakeven_logo.png"
 
 include: ["node_modules/tailwindcss"]

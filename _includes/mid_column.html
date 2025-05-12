@@ -1,0 +1,7 @@
+<span class="text-xs font-extrabold">SVERIGES BÄSTA MARGINALER:</span><br>
+
+{% for post in site.posts %}
+👉 <a href="{{ site.baseurl }}{{ post.url }}" class="articlelink text-rose-500 text-sm">
+	{{ post.title }}	
+</a><br>
+{% endfor %}

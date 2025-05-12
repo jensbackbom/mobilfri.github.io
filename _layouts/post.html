@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "sv-SE" }}">
+  {% include head.html %}
+  <body>
+    <div class="bg-white">
+      {% include header.html %}
+
+
+      <div class="flex min-h-full flex-col">
+        <!-- 3 column wrapper -->
+        <div class="mx-auto w-full max-w-7xl grow lg:flex xl:px-2">
+
+          <div class="px-4 py-6 sm:px-6 lg:pl-8 xl:flex-1 xl:pl-6">
+            <!-- Main area -->
+
+              <article class="post mb-12">
+
+                {% if page.image %}
+                  <a href="{{ site.baseurl }}{{ post.url }}" class="articlelink"><img src="{{ page.image | absolute_url }}" class="mb-4">
+                {% else %}
+
+                <x-placeholder message="Main area">
+                    <div class="relative h-[200px] overflow-hidden rounded-xl border border-dashed border-gray-400 opacity-75 mb-4 xl:h-[230px]">
+                      <svg class="absolute inset-0 h-full w-full stroke-gray-900/10" fill="none">
+                        <defs>
+                          <pattern id="pattern-7b69d9f9-ca30-48c9-a80a-268e7b084e52" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+                            <path d="M-3 13 15-5M-5 5l18-18M-1 21 17 3"></path>
+                          </pattern>
+                        </defs>
+                        <rect stroke="none" fill="url(#pattern-7b69d9f9-ca30-48c9-a80a-268e7b084e52)" width="100%" height="100%"></rect>
+                      </svg>
+                    </div>
+                  </x-placeholder>
+
+                {% endif %}
+
+                <div style="mb-2"> 
+                {% for category in page.categories %}<span class="bg-rose-500 text-white mr-2 p-1 text-sm"><i>{{category}}</i></span>{% endfor %}
+                </div>
+
+                <H1 class="post-title-large mb-2">
+                    {{ page.title }}
+                </H1>
+                </a>
+
+                <!--<time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>-->
+                <div class="article-text">
+                {{ page.content }}
+                </div>
+              </article>
+
+          </div>
+
+          <div class="shrink-0 border-t border-gray-200 px-4 py-2 sm:px-6 lg:w-72 lg:border-l lg:border-t-0 lg:pr-8 xl:pr-6 hidden lg:block">
+            <!-- Right column area -->
+            {% include banners.html %}
+          </div>
+        </div>
+      </div>
+
+    </div>  
+
+    {% include footer.html %}
+
+  </body>
+</html>

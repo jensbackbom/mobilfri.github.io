@@ -1,0 +1,59 @@
+---
+layout: default
+title: "BREAKEVEN.nu - svarta siffror är det nya svarta"
+---
+
+
+<div class="posts">
+  {% for post in paginator.posts %}
+  <article class="post mb-12">
+
+  	{% if post.image %}
+  		<a href="{{ site.baseurl }}{{ post.url }}"><img src="{{ post.image | absolute_url }}" class="mb-4 filter grayscale hover:grayscale-0">
+  	{% else %}
+
+	  <x-placeholder message="Main area">
+        <div class="relative h-[200px] overflow-hidden rounded-xl border border-dashed border-gray-400 opacity-75 mb-4 xl:h-[230px]">
+          <svg class="absolute inset-0 h-full w-full stroke-gray-900/10" fill="none">
+            <defs>
+              <pattern id="pattern-7b69d9f9-ca30-48c9-a80a-268e7b084e52" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+                <path d="M-3 13 15-5M-5 5l18-18M-1 21 17 3"></path>
+              </pattern>
+            </defs>
+            <rect stroke="none" fill="url(#pattern-7b69d9f9-ca30-48c9-a80a-268e7b084e52)" width="100%" height="100%"></rect>
+          </svg>
+        </div>
+      </x-placeholder>
+
+  	{% endif %}
+
+  	<div style="mb-2"> 
+  	{% for category in post.categories %}<span class="bg-rose-500 text-white mr-2 p-1 text-sm"><i>{{category}}</i></span>{% endfor %}
+  	</div>
+
+    <H1 class="post-title mb-2">
+        {{ post.title }}
+    </H1>
+  	</a>
+
+    <!--<time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>-->
+
+    {{ post.excerpt }}
+  </article>
+  {% endfor %}
+</div>
+
+<!--
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
+  {% else %}
+    <span class="pagination-item older text-sky-500">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
+  {% else %}
+    <span class="pagination-item newer text-sky-500">Newer</span>
+  {% endif %}
+</div>
+-->
