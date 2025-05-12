@@ -1,8 +1,8 @@
-url: "https://www.breakeven.nu" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: 'www.breakeven.nu'
+url: "https://www.mobilfri.se" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: 'www.mobilfri.se'
 baseurl: "" # the subpath of your site, e.g. /blog
-title: "Breakeven - hyllar bolag med fina marginaler" # the name of your site, e.g. ACME Corp.
-description: "Breakeven visar upp Sveriges lönsammaste bolag!"
+title: "Mobilfri.se - för ett sunt mobilanvändande" # the name of your site, e.g. ACME Corp.
+description: "Vi hjälper dig att minska ditt mobilanvändande och frigöra tid för viktigare saker."
 paginate: 5
 permalink: /:year/:month/:day/:title:output_ext
 
