@@ -1,7 +1,7 @@
-url: "https://www.mobilfri.se" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: 'www.mobilfri.se'
-baseurl: "" # the subpath of your site, e.g. /blog
-title: "Mobilfri.se - för ett sunt mobilanvändande" # the name of your site, e.g. ACME Corp.
+url: "https://www.telefonfri.se" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: 'www.telefonfri.se'
+#baseurl: "" # the subpath of your site, e.g. /blog
+title: "Telefonfri.se - för ett sunt mobilanvändande" # the name of your site, e.g. ACME Corp.
 description: "Vi hjälper dig att minska ditt mobilanvändande och frigöra tid för viktigare saker."
 paginate: 5
 permalink: /:year/:month/:day/:title:output_ext
