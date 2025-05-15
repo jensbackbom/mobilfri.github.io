@@ -310,12 +310,20 @@
     
     /* Adjust overlapping for mobile */
     .profile-image:first-child {
-      margin-right: -20px;
-      margin-bottom: 15px;
-    }
-    
-    .profile-image:last-child {
-      margin-top: 15px;
+        margin-right: -60px;
+        margin-bottom: 40px;
+        z-index: 1;
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+      }
+      
+      .profile-image:last-child {
+        z-index: 2;
+        margin-top: 50px;
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
     }
     
     .image-phone {
@@ -363,16 +371,19 @@
     
     /* Reset overlapping for very small screens */
     .profile-image:first-child {
-      margin-right: 0;
-      margin-bottom: 0px;
-    }
-    
-    .profile-image:last-child {
-      margin-top: 0px;
-    }
-    
+        margin-right: -60px;
+        margin-bottom: 40px;
+        margin-top: -20px;
+        z-index: 1;
+      }
+      
+      .profile-image:last-child {
+        z-index: 2;
+        margin-top: 50px;
+      }
+        
     .profile-image {
-      width: 70%;
+        width: 60%;
     }
     
     .method-card {
