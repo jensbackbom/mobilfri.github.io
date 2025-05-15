@@ -300,30 +300,33 @@
     }
     
     .profile-container {
-      width: 100%;
-      justify-content: center;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
     }
     
     .profile-image {
-      width: 45%;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
     }
     
-    /* Adjust overlapping for mobile */
+    /* Maintain overlapping effect on mobile */
     .profile-image:first-child {
-        margin-right: -60px;
-        margin-bottom: 40px;
+        margin-right: -40px;
+        margin-bottom: 0;
+        transform: translateY(20px);
         z-index: 1;
-        width: 250px;
-        height: 250px;
-        object-fit: cover;
-      }
-      
-      .profile-image:last-child {
+    }
+    
+    .profile-image:last-child {
         z-index: 2;
-        margin-top: 50px;
-        width: 250px;
-        height: 250px;
-        object-fit: cover;
+        transform: translateY(-20px);
+        margin-top: 0;
     }
     
     .image-phone {
@@ -364,32 +367,17 @@
     }
     
     .profile-container {
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
+        max-width: 400px;
     }
     
-    /* Reset overlapping for very small screens */
-    .profile-image:first-child {
-        margin-right: -60px;
-        margin-bottom: 40px;
-        z-index: 1;
-        width: 250px;
-        height: 250px;
-        object-fit: cover;
-      }
-      
-      .profile-image:last-child {
-        z-index: 2;
-        margin-top: 50px;
-        width: 250px;
-        height: 250px;
-        object-fit: cover;
-    }
-
-        
     .profile-image {
-        width: 60%;
+        width: 180px;
+        height: 180px;
+    }
+    
+    /* Adjust overlap for smaller screens */
+    .profile-image:first-child {
+        margin-right: -30px;
     }
     
     .method-card {
