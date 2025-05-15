@@ -373,14 +373,20 @@
     .profile-image:first-child {
         margin-right: -60px;
         margin-bottom: 40px;
-        margin-top: -20px;
         z-index: 1;
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
       }
       
       .profile-image:last-child {
         z-index: 2;
         margin-top: 50px;
-      }
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+    }
+
         
     .profile-image {
         width: 60%;
